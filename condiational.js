@@ -33,3 +33,34 @@ outVar = varFour < 0? varFour *= -1
         : varFour === 0? varFour += 100 
         : varFour
 console.log(`The varfour = ${varFour}`)
+
+console.log()
+console.log(" ------- Calculator ------- ")
+
+const  input = require("prompt-sync")({sigint:true})
+console.log("Select The Operator Symbol =\n \t1. Add (+)\n \t2. Sub (-)\n \t3. Mul (*)\n \t4. Div (/)")
+const operator = input("> ")
+const opOne = Number(input("> Enter VarOne = "))
+const opTwo = Number(input("> Enter VarTwo = "))
+
+// console.log(`${operator} | ${opOne} | ${opTwo}`)
+if (operator && opOne && opTwo){
+    if (operator == '+'){
+        console.log(`${opOne} + ${opTwo} = ${opOne + opTwo}`)
+    }
+    else if(operator == '-'){
+        console.log(`${opOne} - ${opTwo} = ${opOne - opTwo}`)
+    }
+    else if(operator == '*'){
+        console.log(`${opOne} * ${opTwo} = ${opOne * opTwo}`)
+    }
+    else if(operator == '/'){
+        console.log(`${opOne} / ${opTwo} = ${opOne / opTwo}`)
+    }
+    else{
+        console.log("Invalid Operator")
+    }
+}
+else{
+    console.log("Something is missing")
+}
