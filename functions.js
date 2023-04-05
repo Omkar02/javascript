@@ -1,6 +1,6 @@
 // ------- Simple Function -------
 function sum(a, b){
-    total = a + b
+    let total = a + b
     console.log(`Sum of ${a} + ${b} = ${total}`)
     return total
 }
@@ -48,7 +48,7 @@ let square = a => a**2
 // * Arrow functions with only one argument 
 // * can be made cleaner by dropping the parentheses around the arguments
 
-val = 5
+let val = 5
 console.log(`square of ${val} = ${square(val)}`)
 console.log()
 
